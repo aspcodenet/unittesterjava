@@ -1,0 +1,122 @@
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASPCode.net Developers Cloud -
+        Hejsan Kalle
+    </title><meta name="description" content=""><link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1/css/pico.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  />
+
+</head>
+
+<body>
+
+<!-- Nav -->
+<nav class="container-fluid">
+    <ul>
+        <li><a href="/" class="contrast"><strong>The Calculatorr</strong> 100% reliable</a></li>
+    </ul>
+    <ul>
+        <li>
+            <details role="list" dir="rtl">
+                <summary aria-haspopup="listbox" role="link" class="secondary">Support</summary>
+                <ul role="listbox">
+                </ul>
+            </details>
+        </li>
+
+    </ul>
+</nav><!-- ./ Nav -->
+
+
+<main class="container top">
+
+
+    <section>
+        <hgroup style="text-align:center;">
+            <h1><i class="fa-solid fa-beer-mug-empty"></i> Enter your parameters</h1>
+            <h2>...</h2>
+        </hgroup>
+
+
+        <form method="POST">
+            <fieldset>
+                <label>
+                    Tal 1
+                    <input type="number"
+                           name="tal1"
+                           placeholder="tal 1"
+                           th:value="${tal1}" />
+                </label>
+                <label>
+                    Location
+                    <select name="action">
+                        <option th:value="add" th:selected="(${action}=='add')">Plus</option>
+                        <option th:value="subtract" th:selected="(${action}=='subtract')">Minus</option>
+                        <option th:value="multiply" th:selected="(${action}=='multiply')">multiplicerat med</option>
+                        <option th:value="divide" th:selected="(${action}=='divide')">dividerat med</option>
+                    </select>
+                </label>
+
+                <label>
+                    Tal 2
+                    <input type="number"
+                           name="tal2"
+                           placeholder="tal 2"
+                           th:value="${tal2}" />
+                </label>
+
+            </fieldset>
+            <h1 th:text="${Result}"></h1>
+
+            <input
+                    type="submit"
+                    value="Tell me"
+            />
+        </form>
+
+        <h1 th:text="${Result}"></h1>
+
+    </section>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+<!-- Footer -->
+<footer class="flex-evenly">
+
+
+    <div>
+        (C) ASPCode.net  2025  Product by
+        <a href="https://systementor.se">
+            Systementor AB
+        </a>
+
+    </div>
+    <div >
+        <a asp-page="/termsofservice">Terms of service</a>
+        <a asp-page="/Privacy">Privacy</a>
+    </div>
+    <div>
+        Settings: 20220729.1211.583fba3d
+    </div>
+
+
+</footer>
+
+</body>
+
+
+
+
+</html>
