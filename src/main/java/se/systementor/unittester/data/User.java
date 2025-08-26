@@ -31,6 +31,12 @@ public class User {
     private java.sql.Timestamp registeredAt;
 
     public User() {
+    }
 
+    public User(Long id, String email, String passwordHashed, java.sql.Timestamp registeredAt) {
+        this.id = id;
+        this.email = email;
+        this.passwordHashed = passwordHashed;
+        this.registeredAt = registeredAt;
     }
 }
