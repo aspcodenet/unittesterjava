@@ -54,6 +54,6 @@ public class UserRegistrationService {
     }
 
     private boolean isAlreadyRegistered(String email) {
-        return false;
+        return userRepository.findByEmail(email) != null;
     }
 }
