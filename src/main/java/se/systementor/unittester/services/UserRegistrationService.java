@@ -31,11 +31,19 @@ public class UserRegistrationService {
     }
 
     private void saveUserToDatabase(String email, String password) {
-        userRepository.save(User.builder()
-            .email(email)
-            .passwordHashed(password) // In real life, hash the password!
-            .registeredAt(new java.sql.Timestamp(System.currentTimeMillis()))
-            .build());
+//       User user = new User();
+//       user.setEmail(email);
+//       user.setPasswordHashed(password);
+//       user.setRegisteredAt(new java.sql.Timestamp(System.currentTimeMillis()));
+//       userRepository.save(user);
+
+       User user = User.builder()
+               .email(email)
+               .passwordHashed(password) // In real life, hash the password!
+               .registeredAt(new java.sql.Timestamp(System.currentTimeMillis()))
+               .build();
+
+        userRepository.save(user);
     }
 
     private int registrationsToday() {
